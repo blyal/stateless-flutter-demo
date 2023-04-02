@@ -1,10 +1,10 @@
 # Stateless Flutter Demo
 
-A Flutter project.
+A simple Flutter project.
 
 ## This Project
 
-This project was a starting point for a Flutter application that has since been amended as part of a coding assignment.
+This project is a starting point for a Flutter application that has been amended as part of a coding assignment.
 
 ## Flutter Resources
 
