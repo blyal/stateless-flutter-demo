@@ -1,6 +1,6 @@
 # Stateless Flutter Demo
 
-A new Flutter project.
+A Flutter project.
 
 ## This Project
 
