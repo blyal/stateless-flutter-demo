@@ -3,6 +3,9 @@
 .dart_tool/
 .packages
 
+# Build artifacts
+**/build/
+
 # Generated files
 .generated/
 
