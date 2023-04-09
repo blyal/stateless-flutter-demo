@@ -18,8 +18,7 @@ class MyApp extends StatelessWidget {
               theme: ThemeData(
                 primarySwatch: Colors.blue,
               ),
-              home: const MyHomePage(
-                  title: 'Alex\'s Stateless Flutter Demo for DGT'),
+              home: const MyHomePage(title: 'Alex\'s Stateless Flutter Demo'),
             ),
         data: counter);
   }
@@ -38,31 +37,31 @@ class MyHomePage extends StatelessWidget {
       myApp.counter.value = myApp.counter.value + 1;
     }
 
-    return ProvidableValueConsumer<int>(
-        builder: (context, counter) => Scaffold(
-              appBar: AppBar(
-                title: Text(title),
-              ),
-              body: Center(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    const Text(
-                      'You have pushed the button this many times:',
-                    ),
-                    Text(
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(title),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            const Text(
+              'You have pushed the button this many times:',
+            ),
+            ProvidableValueConsumer(
+                providableValue: myApp.counter,
+                builder: (context, counter) => Text(
                       '$counter',
                       style: Theme.of(context).textTheme.headlineMedium,
-                    ),
-                  ],
-                ),
-              ),
-              floatingActionButton: FloatingActionButton(
-                onPressed: incrementCounter,
-                tooltip: 'Increment',
-                child: const Icon(Icons.add),
-              ),
-            ),
-        providableValue: myApp.counter);
+                    ))
+          ],
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: incrementCounter,
+        tooltip: 'Increment',
+        child: const Icon(Icons.add),
+      ),
+    );
   }
 }
