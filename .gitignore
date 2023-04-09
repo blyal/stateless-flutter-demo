@@ -1,0 +1,14 @@
+# Flutter-related
+**/ios/Pods/
+.dart_tool/
+.packages
+
+# Generated files
+.generated/
+
+# Miscellaneous
+*.lock
+*.bak
+*.swp
+*~
+.directory
